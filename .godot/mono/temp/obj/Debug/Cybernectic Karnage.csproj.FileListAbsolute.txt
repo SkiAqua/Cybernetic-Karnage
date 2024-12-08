@@ -1,0 +1,17 @@
+C:\Users\SKI\Godot\Projects\CK\.godot\mono\temp\bin\Debug\Cybernectic Karnage.deps.json
+C:\Users\SKI\Godot\Projects\CK\.godot\mono\temp\bin\Debug\Cybernectic Karnage.runtimeconfig.json
+C:\Users\SKI\Godot\Projects\CK\.godot\mono\temp\bin\Debug\Cybernectic Karnage.dll
+C:\Users\SKI\Godot\Projects\CK\.godot\mono\temp\bin\Debug\Cybernectic Karnage.pdb
+C:\Users\SKI\Godot\Projects\CK\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\SKI\Godot\Projects\CK\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\SKI\Godot\Projects\CK\.godot\mono\temp\obj\Debug\Cybernectic Karnage.csproj.AssemblyReference.cache
+C:\Users\SKI\Godot\Projects\CK\.godot\mono\temp\obj\Debug\Cybernectic Karnage.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SKI\Godot\Projects\CK\.godot\mono\temp\obj\Debug\Cybernectic Karnage.AssemblyInfoInputs.cache
+C:\Users\SKI\Godot\Projects\CK\.godot\mono\temp\obj\Debug\Cybernectic Karnage.AssemblyInfo.cs
+C:\Users\SKI\Godot\Projects\CK\.godot\mono\temp\obj\Debug\Cybernectic Karnage.csproj.CoreCompileInputs.cache
+C:\Users\SKI\Godot\Projects\CK\.godot\mono\temp\obj\Debug\Cybernec.4836F7F4.Up2Date
+C:\Users\SKI\Godot\Projects\CK\.godot\mono\temp\obj\Debug\Cybernectic Karnage.dll
+C:\Users\SKI\Godot\Projects\CK\.godot\mono\temp\obj\Debug\refint\Cybernectic Karnage.dll
+C:\Users\SKI\Godot\Projects\CK\.godot\mono\temp\obj\Debug\Cybernectic Karnage.pdb
+C:\Users\SKI\Godot\Projects\CK\.godot\mono\temp\obj\Debug\Cybernectic Karnage.genruntimeconfig.cache
+C:\Users\SKI\Godot\Projects\CK\.godot\mono\temp\obj\Debug\ref\Cybernectic Karnage.dll

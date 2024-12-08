@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtroxn8v0t50h"]
+
+[ext_resource type="Texture2D" uid="uid://dbng18gc3ps5g" path="res://Assets/road_street.png" id="1_bdrii"]
+[ext_resource type="PackedScene" uid="uid://dahsosl63bha8" path="res://Scenes/Characters/sektor.tscn" id="2_eb03l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_01c6h"]
+size = Vector2(4361, 423)
+
+[node name="Game" type="Node2D"]
+
+[node name="BotStage" type="Node2D" parent="."]
+
+[node name="road" type="Sprite2D" parent="BotStage"]
+position = Vector2(3306, 540)
+scale = Vector2(2.787, 1.3)
+texture = ExtResource("1_bdrii")
+
+[node name="road2" type="Sprite2D" parent="BotStage"]
+position = Vector2(1101.28, 540)
+scale = Vector2(2.781, 1.3)
+texture = ExtResource("1_bdrii")
+
+[node name="areacollision" type="StaticBody2D" parent="BotStage"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="collision" type="CollisionShape2D" parent="BotStage/areacollision"]
+position = Vector2(2180.5, 210.5)
+shape = SubResource("RectangleShape2D_01c6h")
+
+[node name="sektor" parent="." instance=ExtResource("2_eb03l")]
+position = Vector2(175, 529)
+
+[node name="debug" type="Label" parent="."]
+offset_left = 609.0
+offset_top = 123.0
+offset_right = 649.0
+offset_bottom = 146.0
+text = "Debug"

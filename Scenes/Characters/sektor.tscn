@@ -1,0 +1,453 @@
+[gd_scene load_steps=29 format=3 uid="uid://dahsosl63bha8"]
+
+[ext_resource type="Texture2D" uid="uid://dxqguipxvmyrx" path="res://Assets/sheets/idle.png" id="1_nyumk"]
+[ext_resource type="Script" path="res://Scripts/Character.cs" id="1_ylb7m"]
+[ext_resource type="Script" path="res://Scripts/KeyboardActionManager.gd" id="2_cubkl"]
+[ext_resource type="Texture2D" uid="uid://dxrnrrb37sve8" path="res://Assets/sheets/idle2.png" id="2_ybrxe"]
+[ext_resource type="Texture2D" uid="uid://dr13hmg0e86l2" path="res://Assets/sheets/idle3.png" id="3_s3mtd"]
+[ext_resource type="Texture2D" uid="uid://d2tbkm3cewa2p" path="res://Assets/sheets/idle4.png" id="4_ttjlf"]
+[ext_resource type="Texture2D" uid="uid://dd3r5ko3f47gx" path="res://Assets/sheets/idle5.png" id="5_q4g15"]
+[ext_resource type="Texture2D" uid="uid://dt34iy3tm4py" path="res://Assets/sheets/idle6.png" id="6_rke3s"]
+[ext_resource type="Texture2D" uid="uid://cf8m1w1ohryqk" path="res://Assets/sheets/idle7.png" id="7_4a05d"]
+[ext_resource type="Texture2D" uid="uid://dfdtdhhajmrrv" path="res://Assets/sheets/walking1.png" id="9_iwvvm"]
+[ext_resource type="Texture2D" uid="uid://bj306qy54bggi" path="res://Assets/sheets/jump1.png" id="9_s5aut"]
+[ext_resource type="Texture2D" uid="uid://cx1plvcrhm73d" path="res://Assets/sheets/walking2.png" id="10_m2qj1"]
+[ext_resource type="Texture2D" uid="uid://dyosxnw6v3mp" path="res://Assets/sheets/jump2.png" id="10_omov1"]
+[ext_resource type="Texture2D" uid="uid://ilsxne17k7jw" path="res://Assets/sheets/walking3.png" id="11_ekeay"]
+[ext_resource type="Texture2D" uid="uid://bldmtoeawh2op" path="res://Assets/sheets/walking4.png" id="12_3fdlx"]
+[ext_resource type="Texture2D" uid="uid://csiskoc6olvvb" path="res://Assets/sheets/walking5.png" id="13_ftf3n"]
+[ext_resource type="Texture2D" uid="uid://dbxw3vu6ib285" path="res://Assets/sheets/walking6.png" id="14_iqdyx"]
+[ext_resource type="Texture2D" uid="uid://dl6ol24ogk1d4" path="res://Assets/sheets/walking7.png" id="15_0en0v"]
+[ext_resource type="Texture2D" uid="uid://bqoj25xru25hx" path="res://Assets/sheets/walking8.png" id="16_hflnm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v8v03"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nyumk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ybrxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_s3mtd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ttjlf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_q4g15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rke3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4a05d")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_s5aut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_omov1")
+}],
+"loop": true,
+"name": &"jumping",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_iwvvm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_m2qj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ekeay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3fdlx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ftf3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_iqdyx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_0en0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_hflnm")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x73en"]
+radius = 14.1299
+
+[sub_resource type="Animation" id="Animation_y6wkf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animator:speed_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Gfx/Character/Sprites:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4.11765, -60)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Gfx/Character/Sprites:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Gfx/Character/Sprites:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Gfx/Character/Sprites:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+
+[sub_resource type="Animation" id="Animation_srmi0"]
+resource_name = "idle"
+length = 0.7
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animator:speed_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Gfx/Character/Sprites:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(4, -60), Vector2(2, -60), Vector2(1, -60), Vector2(2, -60), Vector2(3, -60), Vector2(5, -60), Vector2(5, -60), Vector2(5, -60)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Gfx/Character/Sprites:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Gfx/Character/Sprites:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Gfx/Character/Sprites:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 6]
+}
+
+[sub_resource type="Animation" id="Animation_q78vk"]
+resource_name = "jump"
+length = 0.07
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Gfx/Character/Sprites:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4, -39)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Gfx/Character/Sprites:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Gfx/Character/Sprites:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"jumping"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Gfx/Character/Sprites:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Animator:speed_scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_d867s"]
+resource_name = "jumping"
+length = 0.4
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Gfx/Character/Sprites:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3, -38)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Gfx/Character/Sprites:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0, 0.785398, 1.5708, 2.35619, 3.14159, 3.92699, 4.71239, 5.49779, 6.28319]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Gfx/Character/Sprites:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"jumping"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Gfx/Character/Sprites:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_ipj26"]
+resource_name = "walking"
+length = 0.8
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Gfx/Character/Sprites:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(10, -46), Vector2(10, -46), Vector2(10, -46), Vector2(10, -46), Vector2(10, -46), Vector2(10, -46), Vector2(10, -46), Vector2(10, -46)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Gfx/Character/Sprites:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Gfx/Character/Sprites:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walking"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Gfx/Character/Sprites:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vwyp1"]
+_data = {
+"RESET": SubResource("Animation_y6wkf"),
+"idle": SubResource("Animation_srmi0"),
+"jump": SubResource("Animation_q78vk"),
+"jumping": SubResource("Animation_d867s"),
+"walking": SubResource("Animation_ipj26")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_voms0"]
+size = Vector2(38.8235, 22.3529)
+
+[node name="sektor" type="CharacterBody2D"]
+scale = Vector2(1.7, 1.7)
+collision_mask = 2
+motion_mode = 1
+platform_on_leave = 2
+platform_floor_layers = 4294967040
+platform_wall_layers = 2
+script = ExtResource("1_ylb7m")
+_controlData = ExtResource("2_cubkl")
+_characterNodePath = NodePath("Gfx/Character")
+
+[node name="Gfx" type="Node2D" parent="."]
+position = Vector2(0, -0.588235)
+
+[node name="Character" type="Node2D" parent="Gfx"]
+
+[node name="Sprites" type="AnimatedSprite2D" parent="Gfx/Character"]
+texture_filter = 1
+position = Vector2(4.11765, -60)
+sprite_frames = SubResource("SpriteFrames_v8v03")
+animation = &"idle"
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(-2.84217e-14, 5.96046e-08)
+shape = SubResource("CircleShape2D_x73en")
+
+[node name="Animator" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vwyp1")
+}
+next/jump = &"jumping"
+
+[node name="DamageArea" type="Area2D" parent="."]
+
+[node name="Collision" type="CollisionShape2D" parent="DamageArea"]
+position = Vector2(39.4118, -0.588235)
+shape = SubResource("RectangleShape2D_voms0")
+debug_color = Color(0.999109, 0, 0.123329, 0.42)
+
+[node name="DangerArea" type="Area2D" parent="."]
+
+[node name="Collision" type="CollisionShape2D" parent="DangerArea"]
+position = Vector2(39.4118, -23.5294)
+shape = SubResource("RectangleShape2D_voms0")
+debug_color = Color(0.224901, 0.159761, 0.0611121, 0.42)
